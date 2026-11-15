@@ -1,0 +1,1 @@
+export const SUPABASE_URL = '';\nexport const SUPABASE_PUBLISHABLE_KEY = '';\n
