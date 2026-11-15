@@ -52,3 +52,5 @@
 .iraq-feature-caption span{display:block;margin-top:15px;text-align:left;line-height:2;font-size:14px}
 @media(max-width:1050px){.manufacturer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.partnership-cards{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.manufacturer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.manufacturer-card{min-height:160px;padding:12px}.manufacturer-logo{height:90px}.partnership-cards{grid-template-columns:1fr}.partnership-source{grid-template-columns:1fr}.partnership-card-visual{height:175px}.iraq-arabic{text-align:right}}
+
+.manufacturer-logo{position:relative;overflow:hidden}.manufacturer-logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:4px;transition:transform .55s cubic-bezier(.2,.8,.2,1)}.manufacturer-card:hover .manufacturer-logo img{transform:scale(1.07)}
