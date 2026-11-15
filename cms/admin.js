@@ -10,7 +10,7 @@ async function start(){
  async function verifyAdmin(){
   const {data:{user}}=await db.auth.getUser();
   if(!user)return false;
-  const {data,error}=await db.from('site_admins').select('user_id').eq('user_id',user.id).maybeSingle();
+  const {data,error}=await db.from('admin_users').select('user_id').eq('user_id',user.id).maybeSingle();
   return !error&&!!data;
  }
  async function refreshAuth(){
@@ -61,8 +61,8 @@ async function start(){
  el('editor-form').addEventListener('submit',async e=>{
   e.preventDefault();if(table==='inquiries')return;
   const payload={name:el('item-name').value.trim(),description:el('item-description').value.trim(),published:el('item-published').checked};
-  if(table==='products'){payload.category=el('item-category').value.trim();payload.image_url=el('item-image').value.trim()||null}
-  else{payload.logo_url=el('item-image').value.trim()||null}
+  if(table==='products'){payload.category=el('item-category').value.trim();payload.image_url=el('item-image').value.trim()}
+  else{payload.logo_url=el('item-image').value.trim();payload.partnership_type='Partner'}
   const query=editing?db.from(table).update(payload).eq('id',editing):db.from(table).insert(payload);
   const {error}=await query;
   if(error){status(error.message,true);return}
