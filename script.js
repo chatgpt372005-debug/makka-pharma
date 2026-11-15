@@ -1,7 +1,7 @@
 document.querySelector('#year').textContent=new Date().getFullYear();const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#navigation');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close menu':'Open menu')});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.09,rootMargin:'0px 0px -35px 0px'});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'))}
 
 /* Product search, category filtering and accessible detail view */
-const productCards=[...document.querySelectorAll('.product-showcase-card')];
+let productCards=[...document.querySelectorAll('.product-showcase-card')];
 const productSearch=document.getElementById('product-search');
 const portfolioCount=document.getElementById('portfolio-count');
 let currentCategory='All products';
