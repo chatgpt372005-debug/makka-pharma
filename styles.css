@@ -139,3 +139,10 @@
 @media(max-width:1099px){.hero-visual{width:370px!important;height:370px!important;right:-65px!important;opacity:.55!important}}
 @media(max-width:760px){.hero-visual{top:61%!important;right:-135px!important;opacity:.18!important;pointer-events:none}.visual-core{inset:21%!important}}
 @media(prefers-reduced-motion:reduce){.hero-visual,.visual-core{animation:none!important}}
+
+/* Transparent brand lockup: no white disc or square around logo */
+.hero .visual-core{background:transparent!important;box-shadow:none!important;border-radius:0!important;padding:0!important;overflow:visible!important;animation:heroCoreFloat 7s ease-in-out infinite}
+.hero .visual-core img{width:100%!important;height:100%!important;object-fit:contain!important;mix-blend-mode:multiply;filter:none!important}
+.hero .hero-visual{isolation:auto}
+.hero .hero-visual:hover .visual-core{box-shadow:none!important}
+@media(prefers-reduced-motion:reduce){.hero .visual-core{animation:none!important}}
