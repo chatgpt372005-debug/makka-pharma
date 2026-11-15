@@ -116,3 +116,15 @@
 @keyframes heroRing{from{transform:rotate(0)}to{transform:rotate(360deg)}}
 @media(max-width:760px){.hero{min-height:700px}.hero-visual{opacity:.22;right:-300px}.visual-core{inset:145px}}
 @media(prefers-reduced-motion:reduce){.hero-content,.hero-content .kicker,.hero-content h1,.hero-description,.hero-actions,.hero-visual,.visual-ring,.visual-core,.hero-ambient{animation:none!important}.hero-visual{opacity:.83}}
+
+/* Interactive Makka identity in hero */
+.hero-visual{pointer-events:auto;cursor:default;z-index:1;transition:filter .6s ease}
+.visual-core{border-radius:26%;background:linear-gradient(145deg,#ffffff,#f4f7f5);box-shadow:0 28px 100px #0a0c1859,0 0 0 1px #ffffff7d;transition:box-shadow .45s ease}
+.visual-core img{width:83%;height:83%;object-fit:contain;filter:drop-shadow(0 8px 14px #27173716);transform-origin:center}
+.hero-visual:hover .visual-core img{animation:makkaLogoWiggle .65s cubic-bezier(.2,.75,.3,1) both}
+.hero-visual:hover .visual-core{box-shadow:0 32px 110px #0a0c1870,0 0 45px #8ac5a43d}
+.hero-visual:hover .visual-ring{border-color:#91c7a960}
+.hero-visual:hover{filter:brightness(1.07)}
+@keyframes makkaLogoWiggle{0%,100%{transform:rotate(0) scale(1)}18%{transform:rotate(-3deg) scale(1.035)}40%{transform:rotate(2.6deg) scale(1.045)}63%{transform:rotate(-1.6deg) scale(1.025)}82%{transform:rotate(.7deg) scale(1.01)}}
+@media(max-width:760px){.hero-visual{pointer-events:none}}
+@media(prefers-reduced-motion:reduce){.hero-visual:hover .visual-core img{animation:none!important}}
