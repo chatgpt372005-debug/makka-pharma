@@ -128,3 +128,14 @@
 @keyframes makkaLogoWiggle{0%,100%{transform:rotate(0) scale(1)}18%{transform:rotate(-3deg) scale(1.035)}40%{transform:rotate(2.6deg) scale(1.045)}63%{transform:rotate(-1.6deg) scale(1.025)}82%{transform:rotate(.7deg) scale(1.01)}}
 @media(max-width:760px){.hero-visual{pointer-events:none}}
 @media(prefers-reduced-motion:reduce){.hero-visual:hover .visual-core img{animation:none!important}}
+
+/* Hero logo alignment and clarity: no crop, no corner collision */
+.hero-visual{right:clamp(30px,5.5vw,115px)!important;top:50%!important;transform:translateY(-50%)!important;width:clamp(330px,35vw,480px)!important;height:clamp(330px,35vw,480px)!important;opacity:1!important;animation:heroVisualFade 1.2s .2s ease both!important}
+.visual-core{inset:19%!important;border-radius:50%!important;background:#fff!important;overflow:visible;display:flex;align-items:center;justify-content:center;padding:12px;animation:heroCoreFloat 7s ease-in-out infinite}
+.visual-core img{display:block;width:100%!important;height:100%!important;max-width:100%;max-height:100%;object-fit:contain!important;object-position:center!important;transform:none;image-rendering:auto;filter:none!important}
+.visual-tag{white-space:nowrap}
+@keyframes heroVisualFade{from{opacity:0;filter:blur(7px)}to{opacity:1;filter:blur(0)}}
+@media(min-width:1100px){.hero-content{position:relative;z-index:2;max-width:56%}.hero-visual{right:5%!important}}
+@media(max-width:1099px){.hero-visual{width:370px!important;height:370px!important;right:-65px!important;opacity:.55!important}}
+@media(max-width:760px){.hero-visual{top:61%!important;right:-135px!important;opacity:.18!important;pointer-events:none}.visual-core{inset:21%!important}}
+@media(prefers-reduced-motion:reduce){.hero-visual,.visual-core{animation:none!important}}
