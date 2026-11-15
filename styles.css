@@ -19,3 +19,36 @@
 .iraq-graphic-caption{position:absolute;bottom:35px;color:#cfc2d6;font-size:10px;letter-spacing:.2em}
 @media(max-width:1000px){.iraq-feature{grid-template-columns:1fr}.iraq-feature-copy{padding:85px 7%}.iraq-feature-graphic{min-height:350px}}
 @media(max-width:760px){.portfolio-row{grid-template-columns:100px 1fr;gap:12px;padding:20px 0}.portfolio-image{height:110px;grid-row:span 2;padding:6px}.portfolio-num{display:none}.portfolio-title{grid-column:2}.portfolio-title h3{font-size:19px}.portfolio-title p{font-size:12px}.iraq-feature-copy{padding:75px 7%}.iraq-feature-graphic{min-height:300px}.iraq-halo{width:270px;height:270px}.iraq-emblem{width:145px;height:145px;font-size:55px}}
+
+/* Manufacturing identity cards */
+.manufacturing-section{background:#f8faf8}
+.manufacturer-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:17px}
+.manufacturer-card{padding:19px 14px 22px;min-height:190px;background:#fff;border:1px solid #e5e8e7;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:transform .55s cubic-bezier(.2,.8,.2,1),box-shadow .55s,border-color .55s}
+.manufacturer-card:hover{transform:translateY(-9px);border-color:#94bda2;box-shadow:0 25px 45px #25332c16}
+.manufacturer-card strong{font:700 12px Manrope,sans-serif;color:#4d4654;text-align:center}
+.manufacturer-logo{width:100%;height:108px;background-image:url("manufacturing.png");background-repeat:no-repeat;background-size:500% 200%;transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .6s}
+.manufacturer-card:hover .manufacturer-logo{transform:scale(1.085);filter:saturate(1.2)}
+.logo-0{background-position:0% 0%}.logo-1{background-position:25% 0%}.logo-2{background-position:50% 0%}.logo-3{background-position:75% 0%}.logo-4{background-position:100% 0%}
+.logo-5{background-position:0% 100%}.logo-6{background-position:25% 100%}.logo-7{background-position:50% 100%}.logo-8{background-position:75% 100%}.logo-9{background-position:100% 100%}
+.manufacturing-footnote{font-size:12px;color:#8c888d;margin:27px 0 0}
+.partnership-premium{background:#fff}
+.partnership-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px}
+.partnership-card{overflow:hidden;border:1px solid #e9e4ea;border-radius:18px;background:#fff;transition:transform .55s cubic-bezier(.2,.8,.2,1),box-shadow .55s}
+.partnership-card:hover{transform:translateY(-9px);box-shadow:0 28px 60px #26182c16}
+.partnership-card-visual{height:215px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.visual-rameda{background:linear-gradient(145deg,#e8f2f8,#cbdde9)}.visual-motahedon{background:linear-gradient(145deg,#f0e9f5,#e0d2ed)}.visual-private{background:linear-gradient(145deg,#eaf3e9,#d4e7d7)}
+.partner-initial{font:800 110px Manrope;letter-spacing:-.08em;color:#234a7120;transition:transform .7s,color .7s}
+.partnership-card:hover .partner-initial{transform:scale(1.18) rotate(-6deg);color:#234a7140}
+.partner-visual-tag{position:absolute;left:25px;bottom:20px;font-size:10px;font-weight:800;letter-spacing:.14em;color:#433e52}
+.partnership-card-body{padding:30px 27px 36px}
+.partner-counter{font-size:10px;letter-spacing:.13em;color:#68a87c;font-weight:800}
+.partnership-card-body h3{font-size:25px;line-height:1.3;margin:17px 0 12px}
+.partnership-card-body p{font-size:14px;line-height:1.85;color:#77717e;margin:0}
+.partnership-source{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:center;margin-top:35px;padding:25px;border:1px solid #eae6eb;border-radius:18px;background:#faf9fb}
+.partnership-source span{font-size:11px;letter-spacing:.17em;font-weight:800;color:#5c3b74}
+.partnership-source p{color:#78727d;margin-top:12px}
+.partnership-source img{width:100%;max-height:300px;object-fit:contain;background:#fff;border-radius:10px}
+.iraq-feature-caption{max-width:590px;line-height:2}
+.iraq-feature-caption span{display:block;margin-top:15px;text-align:left;line-height:2;font-size:14px}
+@media(max-width:1050px){.manufacturer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.partnership-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.manufacturer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.manufacturer-card{min-height:160px;padding:12px}.manufacturer-logo{height:90px}.partnership-cards{grid-template-columns:1fr}.partnership-source{grid-template-columns:1fr}.partnership-card-visual{height:175px}.iraq-arabic{text-align:right}}
