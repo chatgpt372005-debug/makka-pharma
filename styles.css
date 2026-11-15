@@ -146,3 +146,9 @@
 .hero .hero-visual{isolation:auto}
 .hero .hero-visual:hover .visual-core{box-shadow:none!important}
 @media(prefers-reduced-motion:reduce){.hero .visual-core{animation:none!important}}
+
+/* Elegant soft-white halo behind the Makka brand */
+.hero .visual-core{inset:19%!important;border-radius:50%!important;background:radial-gradient(circle at 38% 28%,#ffffff 0%,#f9faf9 62%,#e9efeb 100%)!important;box-shadow:0 26px 75px #0b071c45,0 0 0 1px #ffffff80,0 0 60px #b2dfc522!important;padding:17%!important;overflow:hidden!important;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
+.hero .visual-core img{width:100%!important;height:100%!important;object-fit:contain!important;mix-blend-mode:multiply;filter:none!important}
+.hero .hero-visual:hover .visual-core{box-shadow:0 32px 95px #0b071c58,0 0 0 1px #fff,0 0 70px #a2d6b64f!important}
+@media(max-width:760px){.hero .visual-core{padding:14%!important}}
