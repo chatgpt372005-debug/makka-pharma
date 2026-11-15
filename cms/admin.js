@@ -2,7 +2,7 @@ import {SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY} from './config.js';
 const el=id=>document.getElementById(id);
 const status=(message,error=false)=>{el('status').textContent=message;el('status').classList.toggle('error',error)};
 const configured=SUPABASE_URL.startsWith('https://')&&!!SUPABASE_PUBLISHABLE_KEY;
-if(!configured){el('setup').classList.remove('hidden')}else{start()}
+if(!configured){el('setup').classList.remove('hidden');status('Backend configuration is missing.',true)}else{start().catch(error=>{el('login').classList.remove('hidden');status('Dashboard could not connect. Please reload the page or check your connection. '+(error?.message||''),true);console.error(error)})}
 async function start(){
  const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.10/+esm');
  const db=createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
@@ -35,7 +35,7 @@ async function start(){
   el('editor-title').textContent=table==='partners'?'Add partner':table==='products'?'Add product':'Messages';
   el('list-title').textContent=table[0].toUpperCase()+table.slice(1);
   el('item-category').parentElement.classList.toggle('hidden',table==='partners');
-  el('item-image').previousSibling.textContent=table==='partners'?'Logo URL':'Image URL';
+  el('item-image').parentElement.firstChild.textContent=table==='partners'?'Logo URL':'Image URL';
   reset();await load();
  }));
  function reset(){editing=null;el('editor-form').reset();el('item-published').checked=true;el('editor-title').textContent='Add '+(table==='partners'?'partner':'product')}
