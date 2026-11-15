@@ -162,3 +162,34 @@
 .manufacturer-card strong{font-size:13px!important;line-height:1.35;text-align:center}
 .manufacturer-visit{margin-top:0;font-size:11px}
 @media(max-width:760px){.manufacturer-grid{gap:11px}.manufacturer-card{min-height:205px!important;padding:17px 9px!important}.manufacturer-logo,.manufacturer-logo[class*="logo-"]{height:120px!important;min-height:120px}.manufacturer-logo img{width:115px!important;height:115px!important}}
+
+/* Site refinements — November 2026 */
+:focus-visible{outline:3px solid #70b58b;outline-offset:4px}
+.hero .visual-core img{translate:var(--pointer-x,0px) var(--pointer-y,0px);transition:translate .25s ease-out}
+.partner-brand-image{max-width:58%;max-height:135px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 15px #1e253018);transition:transform .5s ease}
+.partnership-card:hover .partner-brand-image{transform:scale(1.06)}
+.partner-wordmark{font:800 clamp(28px,3vw,45px)/1.1 Manrope,sans-serif;letter-spacing:-.055em;color:#41264d;text-align:center}
+.partner-wordmark small{font-size:.48em;letter-spacing:.18em;color:#729b82}
+.portfolio-toolbar{display:flex;justify-content:flex-end;margin:-12px 0 20px}
+.portfolio-search-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.portfolio-search{width:min(100%,340px);border:1px solid #e5e0e9;border-radius:100px;background:#fff;padding:14px 21px;color:#2b1b35;font:500 13px 'DM Sans',sans-serif;transition:border-color .25s,box-shadow .25s}
+.portfolio-search:focus{outline:none;border-color:#79588d;box-shadow:0 0 0 4px #79588d15}
+.portfolio-count{font-size:12px;color:#817a85;margin:-14px 0 23px}
+.product-showcase-card{cursor:pointer}
+.product-showcase-card:focus-visible{outline-offset:4px}
+.product-dialog{width:min(860px,calc(100% - 32px));max-height:min(90vh,900px);border:1px solid #eee7ef;border-radius:24px;padding:0;box-shadow:0 35px 110px #160f2190;overflow:auto}
+.product-dialog::backdrop{background:#1b1224b9;backdrop-filter:blur(8px)}
+.product-dialog-body{display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.product-dialog-photo{background:#f6f5f6;min-height:410px;padding:25px;display:grid;place-items:center}
+.product-dialog-photo img{max-width:100%;max-height:390px;object-fit:contain}
+.product-dialog-copy{padding:48px 38px}
+.product-dialog-copy>span{font:800 11px Manrope,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#5fa87c}
+.product-dialog-copy h2{font-size:clamp(27px,3vw,38px);margin:17px 0}
+.product-dialog-copy p{color:#77707e;line-height:1.8;font-size:14px;margin-bottom:26px}
+.product-dialog-close{position:absolute;right:16px;top:14px;z-index:2;border:0;background:#fff;border-radius:50%;width:39px;height:39px;font-size:26px;color:#3d2a46;cursor:pointer;box-shadow:0 3px 15px #00000012}
+.product-dialog .button{display:inline-flex;align-items:center;justify-content:center;padding:15px 20px;background:#352044;color:#fff;border-radius:100px;font-size:12px;font-weight:700}
+.iraq-map-link{display:inline-block;margin:14px 0 8px;font-weight:800;font-size:13px;color:#85d5a3;text-decoration:underline;text-underline-offset:5px}
+.footer-links{display:flex;flex-wrap:wrap;gap:17px;font-size:12px;font-weight:600}
+.footer-links a:hover{color:#70b58b}
+@media(max-width:760px){.product-dialog-body{grid-template-columns:1fr}.product-dialog-photo{min-height:260px;padding:30px}.product-dialog-photo img{max-height:250px}.product-dialog-copy{padding:26px}.portfolio-toolbar{justify-content:stretch}.portfolio-search{width:100%}.footer-links{justify-content:center}.partner-brand-image{max-width:65%}}
+@media(prefers-reduced-motion:reduce){.hero .visual-core img{translate:0 0!important;transition:none}}
