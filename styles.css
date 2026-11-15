@@ -90,3 +90,29 @@
 .product-showcase-card.image-pending .product-photo:after{content:"Product image coming soon";font-size:12px;font-weight:700;color:#897d91;letter-spacing:.02em;text-align:center;position:absolute;inset:0;display:grid;place-items:center;padding:20px}
 .product-showcase-card.image-pending .product-photo img{visibility:hidden}
 .product-showcase-card.filtered-out,.product-showcase-card.filtered-out.image-pending{display:none!important}
+
+/* Premium hero — understated motion and brand-led visual */
+.hero{isolation:isolate;background:radial-gradient(ellipse at 75% 42%,#4b3260 0%,transparent 48%),linear-gradient(118deg,#1f1729 8%,#352342 65%,#271a32);min-height:min(810px,calc(100svh - 84px))}
+.hero:before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(115deg,#201528aa 12%,transparent 70%);pointer-events:none}
+.hero-ambient{position:absolute;border-radius:50%;pointer-events:none;filter:blur(4px);opacity:.35;z-index:0}
+.hero-ambient-one{width:550px;height:550px;right:8%;top:-300px;background:radial-gradient(circle,#78a99436,transparent 68%);animation:heroFloat 16s ease-in-out infinite alternate}
+.hero-ambient-two{width:450px;height:450px;right:-180px;bottom:-250px;background:radial-gradient(circle,#8a6ba442,transparent 70%);animation:heroFloat 19s ease-in-out infinite alternate-reverse}
+.hero-content{animation:heroEnter 1.15s cubic-bezier(.16,1,.3,1) both}
+.hero-content .kicker{animation:heroEnter 1s .12s cubic-bezier(.16,1,.3,1) both}
+.hero-content h1{animation:heroEnter 1.15s .22s cubic-bezier(.16,1,.3,1) both}
+.hero-description{animation:heroEnter 1.1s .38s cubic-bezier(.16,1,.3,1) both}
+.hero-actions{animation:heroEnter 1.1s .52s cubic-bezier(.16,1,.3,1) both}
+.hero-visual{animation:heroVisualEnter 1.6s .2s cubic-bezier(.16,1,.3,1) both}
+.visual-ring{animation:heroRing 18s linear infinite}
+.ring-two{animation-duration:24s;animation-direction:reverse}
+.visual-core{inset:145px;background:linear-gradient(145deg,#eef5f0,#d7e9e0);box-shadow:0 25px 90px #0e101a5c, inset 0 0 0 1px #ffffff7a;animation:heroCoreFloat 8s ease-in-out infinite}
+.visual-core img{width:56%;height:56%;object-fit:contain;filter:drop-shadow(0 12px 18px #251d3322)}
+.hero-secondary,.button{will-change:transform}
+.hero-bottom{z-index:2}
+@keyframes heroEnter{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroVisualEnter{from{opacity:0;transform:translate(35px,15px) scale(.94)}to{opacity:.83;transform:translate(0,0) scale(1)}}
+@keyframes heroFloat{from{transform:translate3d(0,0,0)}to{transform:translate3d(-32px,25px,0)}}
+@keyframes heroCoreFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+@keyframes heroRing{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@media(max-width:760px){.hero{min-height:700px}.hero-visual{opacity:.22;right:-300px}.visual-core{inset:145px}}
+@media(prefers-reduced-motion:reduce){.hero-content,.hero-content .kicker,.hero-content h1,.hero-description,.hero-actions,.hero-visual,.visual-ring,.visual-core,.hero-ambient{animation:none!important}.hero-visual{opacity:.83}}
